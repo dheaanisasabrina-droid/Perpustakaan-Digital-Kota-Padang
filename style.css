@@ -1,0 +1,195 @@
+/* Reset Margin & Box Model */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #FDF6EC; /* Warna Background kuning */
+    color: #DHEA;            /* Warna Teks biru tua */
+    line-height: 1.6;
+}
+
+/* Header & Flexbox Navigasi */
+header {
+    background-color: #420E07; /* Background merah */
+    padding: 15px 30px;
+    display: flex;             /* Mengaktifkan Flexbox */
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #DHEA;
+}
+
+.logo-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-box h1 {
+    font-size: 20px;
+    color: #DHEA;
+}
+
+.nav-flex {
+    display: flex;             /* Flexbox untuk Menu */
+    gap: 20px;
+}
+
+.nav-flex a {
+    color: #D4AF37;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-flex a:hover {
+    text-decoration: underline;
+}
+
+/* Area Konten Utama */
+main {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.daffa1 {
+    background-color: #420E07; /* Background merah*/
+    color: #DHEA;            /* Teks biru tua */
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+}
+
+.daffa1 h2 {
+    border-bottom: 1px solid #DHEA;
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+    margin-top: 15px;
+}
+
+.judul-koleksi {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #420E07;
+}
+
+/* CSS Grid Galeri (3 Kolom) */
+.galeri-grid {
+    display: grid;             /* Mengaktifkan CSS Grid */
+    grid-template-columns: repeat(3, 1fr); /* 3 Kolom Sama Lebar */
+    gap: 20px;
+}
+
+.kartu {
+    background-color: #420E07;
+    color: #DHEA;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #D4AF37;
+}
+
+.kartu img {
+    border-radius: 4px;
+    height: 160px;
+    object-fit: cover;
+}
+
+.kartu h3 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+/* Fitur Responsif HP (1 Kolom) */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .galeri-grid {
+        grid-template-columns: 1fr; /* Jadi 1 Kolom di Layar HP */
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #420E07;
+    color: #DHEA;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+    border-top: 2px solid #DHEA;
+}
+
+footer a {
+    color: #DHEA;
+    font-weight: bold;
+}
+/* Styling Footer Multi-Kolom ala Web Unand */
+.site-footer {
+    background-color: #2b0904;
+    color: #f0e6d2;
+    padding: 40px 20px 20px 20px;
+    border-top: 3px solid #D4AF37;
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+
+.footer-col h4 {
+    color: #D4AF37;
+    margin-bottom: 15px;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #D4AF37;
+    display: inline-block;
+    padding-bottom: 4px;
+}
+
+.footer-col p {
+    margin-bottom: 8px;
+    line-height: 1.5;
+    color: #d1c7b7;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 8px;
+}
+
+.footer-col ul li a {
+    color: #d1c7b7;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-col ul li a:hover {
+    color: #DHEA;
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(212, 175, 55, 0.3);
+    font-size: 13px;
+    color: #b3a898;
+}
